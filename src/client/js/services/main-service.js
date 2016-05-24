@@ -37,7 +37,16 @@
         }
         var inputNode = document.querySelector('input')
         inputNode.addEventListener('change', playSelectedFile, false)
-     }
+     },
+
+    postVideo: function(data){
+
+
+    },
+
+    getGraphingData: function(data){
+      
+    } 
     };
   }
 
