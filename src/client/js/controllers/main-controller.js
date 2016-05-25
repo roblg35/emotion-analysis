@@ -10,7 +10,7 @@
 
 //checks user is in DB and sets token for login
   function mainController($rootScope, $scope, $location, mainService) {
-   $scope.playVid = mainService.localFileVideoPlayer()
+   $scope.playVid = mainService.localFileVideoPlayer();
   }
 
 })();

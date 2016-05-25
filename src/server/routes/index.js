@@ -3,21 +3,36 @@ var router = express.Router();
 var api = require('../../../key.js')
 var request = require('request');
 
-
-
-router.get('/', function(req, res, next){
+router.post('/',function(req, res, next){
+	var videoUrl = JSON.parse(req.body.payload).data.url;
 	request({
-	  method: 'GET',
-	  url: 'https://api.kairos.com/media/'+videoID,
+	  method: 'POST',
+	  url: 'https://api.kairos.com/media?source='+videoUrl,
 	  headers: {
 	    'app_id': '9b6e34e6',
 	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
 	  }}, function (error, response, body) {
 	  console.log('Status:', response.statusCode);
 	  console.log('Headers:', JSON.stringify(response.headers));
-	  res.render('index', {title: body})
+	  console.log('Response:', body);
 	});
 })
+
+
+// //may not be this route, needs videoID
+// router.get('/main', function(req, res, next){
+// 	request({
+// 	  method: 'GET',
+// 	  url: 'https://api.kairos.com/media/'+videoID,
+// 	  headers: {
+// 	    'app_id': '9b6e34e6',
+// 	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
+// 	  }}, function (error, response, body) {
+// 	  // console.log('Status:', response.statusCode);
+// 	  // console.log('Headers:', JSON.stringify(response.headers));
+// 	  res.render('index', {title: body})
+// 	});
+// })
 
 	
 
@@ -52,15 +67,6 @@ router.get('/', function(req, res, next){
 
 
 
-
-// router.get({'/https://api.kairos.com/media/2b4b0eafab3b000cfcf902e8' 
-//  headers: {
-//     'app_id': '9b6e34e6',
-//     'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
-//   }}, function(req, res, next) {
-
-//   res.render('index', { title: req.body });
-// });
 
 
 module.exports = router;

@@ -45,8 +45,8 @@
     },
 
     getGraphingData: function(data){
-      
-    } 
+
+    }
     };
   }
 
