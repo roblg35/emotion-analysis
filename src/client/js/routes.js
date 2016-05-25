@@ -10,7 +10,7 @@
 
   function appConfig($routeProvider, $httpProvider) {
     $routeProvider
-    .when('/', {
+    .when('/main', {
       templateUrl: 'views/main.html',
       controller: 'mainController',
       restricted: false,
