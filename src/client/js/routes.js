@@ -15,7 +15,13 @@
       controller: 'mainController',
       restricted: false,
       preventLoggedIn: false
+    }).when('/', {
+      templateUrl: 'views/main.html',
+      controller: 'indexController',
+      restricted: false,
+      preventLoggedIn: false
     })
+
   }
   
   
