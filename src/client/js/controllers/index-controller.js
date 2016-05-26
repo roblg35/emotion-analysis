@@ -10,7 +10,13 @@
 
 //checks user is in DB and sets token for login
   function indexController($rootScope, $scope, $location, mainService) {
-   $scope.graph = mainService.getGraphingData();
+   $scope.smile = mainService.setStyle();
+   $scope.smile = mainService.getGraphingSmile();
+   
+   mainService.getData()
+   .then(function(data){
+   	console.log(data)
+   })
 
   }
 

@@ -3,7 +3,11 @@ var router = express.Router();
 var api = require('../../../key.js')
 var request = require('request');
 
+var videoID;
+var data;
+
 router.post('/',function(req, res, next){
+	console.log('body', req.body);
 	var videoUrl = JSON.parse(req.body.payload).data.url;
 	request({
 	  method: 'POST',
@@ -12,29 +16,53 @@ router.post('/',function(req, res, next){
 	    'app_id': '9b6e34e6',
 	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
 	  }}, function (error, response, body) {
-	  console.log('Status:', response.statusCode);
-	  console.log('Headers:', JSON.stringify(response.headers));
-	  console.log('Response:', body);
+	  // console.log('Status:', response.statusCode);
+	  // console.log('Headers:', JSON.stringify(response.headers));
+	  console.log('Response:', JSON.parse (body));
 	});
+	// data = body;
+	// videoID = JSON.parse(body).id;
+	// res.json({ data: body })
 })
+
+// router.get('/is-complete', function(req, res, next){
+// 	if(data) {
+// 		res.json(data)
+// 		data;
+// 	} else {
+// 		res.json(false)
+// 	}
+// })
 
 
 // //may not be this route, needs videoID
-// router.get('/main', function(req, res, next){
-// 	request({
-// 	  method: 'GET',
-// 	  url: 'https://api.kairos.com/media/'+videoID,
-// 	  headers: {
-// 	    'app_id': '9b6e34e6',
-// 	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
-// 	  }}, function (error, response, body) {
-// 	  // console.log('Status:', response.statusCode);
-// 	  // console.log('Headers:', JSON.stringify(response.headers));
-// 	  res.render('index', {title: body})
-// 	});
-// })
+router.get('/', function(req, res, next){
+	request({
+	  method: 'GET',
+	  url: 'https://api.kairos.com/media/'+videoID,
+	  headers: {
+	    'app_id': '9b6e34e6',
+	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
+	  }}, function (error, response, body) {
+	  // console.log('Status:', response.statusCode);
+	  // console.log('Headers:', JSON.stringify(response.headers));
+	  res.render('index', {title: body})
+	});
+})
 
-	
+router.get('/videodata', function(req, res, next){
+	request({
+	  method: 'GET',
+	  url: 'https://api.kairos.com/media/'+videoID,
+	  headers: {
+	    'app_id': '9b6e34e6',
+	    'app_key': '496c2c2f2f8fd1c6b90fdc8dd4b82fa3'
+	  }}, function (error, response, body) {
+	  // console.log('Status:', response.statusCode);
+	  // console.log('Headers:', JSON.stringify(response.headers));
+	  res.json({data: body})
+	});
+})
 
 
 	// var options = {
