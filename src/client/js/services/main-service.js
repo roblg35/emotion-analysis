@@ -3,7 +3,8 @@
     'use strict';
 
     angular.module('myApp')
-        .service('mainService', mainService);
+        .service('mainService', mainService)
+        .service('SocketService', SocketService);
 
     mainService.$inject = ['$window', '$http'];
 
@@ -39,10 +40,9 @@
                 inputNode.addEventListener('change', playSelectedFile, false)
             },
 
-            // getData: function(data) {
-            //   return $http.get('/videodata')
-
-            // },
+             ping: function () {
+                return $http.get('/api/notifications');
+              },
 
             getGraphingSmile: function(data) {
                 return new Highcharts.Chart({
@@ -307,5 +307,9 @@
 
         };
     }
+  SocketService.$inject = ['socketFactory'];
 
+  function SocketService (socketFactory) {
+    return socketFactory();
+  }
 })();

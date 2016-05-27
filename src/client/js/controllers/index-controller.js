@@ -5,11 +5,11 @@
   angular.module('myApp')
     .controller('indexController', indexController);
 
-  indexController.$inject = ['$rootScope', '$scope', '$location', 'mainService'];
+  indexController.$inject = ['$rootScope', '$scope', '$location', 'mainService', 'SocketService'];
 
 
 //checks user is in DB and sets token for login
-  function indexController($rootScope, $scope, $location, mainService) {
+  function indexController($rootScope, $scope, $location, mainService, SocketService) {
    $scope.smile = mainService.setStyle();
    $scope.smile = mainService.getGraphingSmile();
    
@@ -18,6 +18,9 @@
       console.log(ev, data);
     });
 
+    mainService.ping().then(function(data){
+    	console.log(data)
+    })
   }
 
 })();
