@@ -20,6 +20,11 @@
       controller: 'indexController',
       restricted: false,
       preventLoggedIn: false
+    }).when('/ping', {
+      templateUrl: 'views/index.html',
+      controller: 'indexController',
+      restricted: false,
+      preventLoggedIn: false
     })
     .otherwise({redirectTo: '/'});
   }

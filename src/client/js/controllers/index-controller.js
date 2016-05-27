@@ -13,10 +13,10 @@
    $scope.smile = mainService.setStyle();
    $scope.smile = mainService.getGraphingSmile();
    
-   mainService.getData()
-   .then(function(data){
-   	console.log(data)
-   })
+   SocketService.forward('status', $scope);
+    $scope.$on('socket:status', function (ev, data) {
+      console.log(ev, data);
+    });
 
   }
 
