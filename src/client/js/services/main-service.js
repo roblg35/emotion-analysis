@@ -3,11 +3,17 @@
     'use strict';
 
     angular.module('myApp')
-        .service('mainService', mainService);
+        .service('mainService', mainService)
+        .service('SocketService', SocketService);
+;
 
     mainService.$inject = ['$window', '$http'];
 
     function mainService($window, $http) {
+       var attention = [];
+       var dislike = [];
+       var smile = [];
+       var surprise = [];
         return {
             localFileVideoPlayer: function() {
                 'use strict'
@@ -39,12 +45,19 @@
                 inputNode.addEventListener('change', playSelectedFile, false)
             },
 
-            // getData: function(data) {
-            //   return $http.get('/videodata')
+            graphArrays: function(data){
+              var dataArr = data.frames
+               dataArr.forEach(function(val){
+                console.log(val)
+                attention.push(val.person.emotions.attention)
+                dislike.push(val.person.emotions.negative)
+                smile.push(val.person.emotions.smile)
+                surprise.push(val.person.emotions.surprise)
+              })
 
-            // },
+            },
 
-            getGraphingSmile: function(data) {
+            getGraphingLines: function(data) {
                 return new Highcharts.Chart({
                     chart: {
                         renderTo: 'container',
@@ -77,29 +90,24 @@
                         borderWidth: 0
                     },
                     series: [{
-                        name: 'Tokyo',
-                        data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                        name: 'Attention',
+                        data: attention
                     }, {
-                        name: 'New York',
-                        data: [0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
+                        name: 'Dislike',
+                        data: dislike
                     }, {
-                        name: 'Berlin',
-                        data: [0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
+                        name: 'Smile',
+                        data: smile
                     }, {
-                        name: 'London',
-                        data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+                        name: 'surprise',
+                        data: surprise
                     }]
                 });
 
             },
 
             setStyle: function () {
-              // Highcharts.createElement('link', {
-              //    href: 'https://fonts.googleapis.com/css?family=Unica+One',
-              //    rel: 'stylesheet',
-              //    type: 'text/css'
-              // }, null, document.getElementsByTagName('head')[0]);
-
+             
               Highcharts.theme = {
                  colors: ["#2b908f", "#90ee7e", "#f45b5b", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
                     "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
@@ -307,5 +315,9 @@
 
         };
     }
+  SocketService.$inject = ['socketFactory'];
 
+  function SocketService (socketFactory) {
+    return socketFactory();
+  }
 })();

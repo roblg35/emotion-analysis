@@ -3,7 +3,7 @@
   'use strict';
 
   angular.module('myApp', [
-    'ngRoute'
+    'ngRoute','btford.socket-io'
   ]);
 
 })();
