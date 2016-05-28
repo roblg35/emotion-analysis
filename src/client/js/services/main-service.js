@@ -64,15 +64,20 @@
                         type: 'area'
                     },
                     subtitle: {
-                        text: 'Source: WorldClimate.com',
+                        text: 'Emotion Data Graph',
                         x: 0
                     },
-                    xAxis: {
-                        categories: []
-                    },
+                      xAxis: {
+                            allowDecimals: false,
+                            labels: {
+                                formatter: function () {
+                                    return this.value; 
+                                }
+                            }
+                        },
                     yAxis: {
                         title: {
-                            text: 'Temperature (°C)'
+                            text: 'Emotion %'
                         },
                         plotLines: [{
                             value: 0,
@@ -81,7 +86,7 @@
                         }]
                     },
                     tooltip: {
-                        valueSuffix: '°C'
+                        valueSuffix: '%'
                     },
                     legend: {
                         layout: 'vertical',
