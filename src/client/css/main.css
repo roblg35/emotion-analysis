@@ -6,6 +6,7 @@ body{
 #contain {
   overflow: hidden;
   height: 430px;
+  width: 110%;
   background: #edeae8;
   position: relative;
 }
