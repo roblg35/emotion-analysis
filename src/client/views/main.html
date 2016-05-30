@@ -1,6 +1,10 @@
-<!--   <div id="message"></div>
-  <input model="playVid" type="file" accept="video/*"/>
-  <video controls></video>	
-  <device type="media" onchange="update(this.data)"></device>
+<!--   <div ng-hide="togglepost" id="message"></div>
+ -->  <!-- input ng-hide="!togglepost" id="message2" model="playVid" type="file" accept="video/*"/> -->
+  <video ng-hide="!togglepost" id="inputvid" controls></video>	
+  
+  <device ng-hide="!togglepost" type="media" id="device" onchange="update(this.data)">
+<input ng-hide="!togglepost" id="message2" model="playVid" type="file" accept="video/*"/>  
+  <div ng-hide="!togglepost" id="message"></div>
+	
+  </device>
 
- -->
