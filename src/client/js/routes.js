@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('myApp')
+  angular.module('myApp', ['ngRoute', 'btford.socket-io'])
     .config(appConfig)
 
   appConfig.$inject = ['$routeProvider', '$httpProvider'];
@@ -21,7 +21,7 @@
       restricted: false,
       preventLoggedIn: false
     })
-
+    .otherwise({redirectTo: '/'});
   }
   
   

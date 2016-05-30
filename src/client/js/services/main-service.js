@@ -5,7 +5,6 @@
     angular.module('myApp')
         .service('mainService', mainService)
         .service('SocketService', SocketService);
-;
 
     mainService.$inject = ['$window', '$http'];
 

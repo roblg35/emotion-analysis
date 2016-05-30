@@ -8,6 +8,7 @@
   indexController.$inject = ['$rootScope', '$scope', '$location', 'mainService','SocketService'];
 
 
+
 //checks user is in DB and sets token for login
   function indexController($rootScope, $scope, $location, mainService, SocketService) {
    $scope.smile = mainService.setStyle();
@@ -20,6 +21,7 @@
     });
 
 
+    
   }
 
 })();
