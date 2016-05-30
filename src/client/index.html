@@ -9,8 +9,16 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
+
+
+  <div id="contain">
+  <video class="background" autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+  </video>
+</div>
+
     <div class="container" > 
-      <a href="#/"><h1>Emotion Analysis</h1></a>
+     <h1>Emotion Analysis</h1>
       <hr>
       <div id="toprow" class="row">
         <div class="col-md-6">
@@ -63,15 +71,19 @@
       <div class="container" > 
         <h2 class="graph-title">Emotion Analysis Graph</h2>
         <hr class="hr">
+        <div class="loading" ng-hide="!myValue" ng-class="ng-hide">
+            <h3>Loading</h3>
+           <img src="https://www.emssoftware.com/EMS/media/EMS/Theme/images/loading.gif">
+       </div>
       </div>
+
+
            <!-- This Renders The Graph-->
         <script src="https://code.highcharts.com/highcharts.js"></script>
         <script src="https://code.highcharts.com/modules/exporting.js"></script>
         <div  class="graph" id="container" style="min-width: 310px; height: 400px; margin: 0 auto" >
            <!-- End of Rendered Graph-->
         </div>
-
-
 
 
 

@@ -12,7 +12,7 @@
 //checks user is in DB and sets token for login
   function indexController($rootScope, $scope, $location, mainService, SocketService) {
    $scope.smile = mainService.setStyle();
-   // $scope.smile = mainService.getGraphingLines();
+   $scope.smile = mainService.getGraphingLines();
   
    SocketService.forward('status', $scope);
    $scope.$on('socket:status', function (ev, data) {
@@ -20,7 +20,7 @@
        $scope.smile = mainService.getGraphingLines();
     });
 
-
+   mainService.background()
     
   }
 
