@@ -3,21 +3,18 @@ body{
 	font-family: Miller Banner;
 }
 
-
-
 #contain {
   overflow: hidden;
-  height: 600px;
-  width: 110%;
+  height: 430px;
   background: #edeae8;
   position: relative;
 }
 
-.background {
+.backgroundvid {
   position: absolute;
   
-/*   Vertical and Horizontal center
-*/  left: 50%; top: 50%;
+  /* Vertical and Horizontal center*/
+  left: 50%; top: 25%;
   transform: translate(-50%, -50%);
 }
 

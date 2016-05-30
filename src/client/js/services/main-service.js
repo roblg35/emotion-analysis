@@ -26,7 +26,7 @@
                     var file = this.files[0]
                     var type = file.type
                     console.log(file.name)
-                    var videoNode = document.querySelector('video')
+                    var videoNode = document.querySelector('#main')
                     var canPlay = videoNode.canPlayType(type)
                     if (canPlay === '') canPlay = 'no'
                     var message = 'Can play type "' + type + '": ' + canPlay
@@ -45,7 +45,7 @@
             },
               
             background: function(){
-              var video = document.querySelector('video')
+              var video = document.querySelector('.backgroundvid')
                 , container = document.querySelector('#contain');
 
               var setVideoDimensions = function () {
