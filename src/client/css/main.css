@@ -1,5 +1,5 @@
 body{
-	background-color: #252823;
+	background-color: #FFFFF6;
 	font-family: Miller Banner;
 }
 
@@ -65,12 +65,12 @@ h5{
 
 h1{
 	text-align: center;
-	color: white;
+	color: black;
 }
 
 hr{
 	width: 500px;
-	border-color: white;
+	border-color: black;
 }
 
 .container{
