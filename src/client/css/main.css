@@ -1,6 +1,7 @@
 body{
-	background-color: #FFFFF6;
-	font-family: Miller Banner;
+	background-color: black;
+/*	background-color: #FFFFF6;
+*/	font-family: Miller Banner;
 }
 
 #contain {
@@ -9,6 +10,16 @@ body{
   width: 110%;
   background: #edeae8;
   position: relative;
+}
+
+#top #head{
+	margin-top: 15px;
+	overflow: hidden;
+	height: 200px;
+	width: 200px;
+	left: 1%;
+	top: 65%;
+	position: relative;
 }
 
 .backgroundvid {
@@ -44,7 +55,14 @@ body{
 	border-bottom-color: white;
 }
 
-video{
+#upload{
+	width: 100%;
+	height: 262px;
+	margin-top: 20px;
+	padding-right: 15px;
+	margin-bottom: 30px;
+}
+#main{
 	width: 100%;
 	height: 262px;
 	margin-top: 20px;
@@ -65,12 +83,12 @@ h5{
 
 h1{
 	text-align: center;
-	color: black;
+	color: white;
 }
 
 hr{
 	width: 500px;
-	border-color: black;
+	border-color: white;
 }
 
 .container{
@@ -110,5 +128,4 @@ margin-bottom: 20px;
 	height: 300px;
 	width: 300px;
 }
-
 
