@@ -13,23 +13,30 @@
       <video class="backgroundvid" autoplay muted loop>
         <source src="background.mp4" type="video/mp4">
       </video>
-    </div>
-    <div id="top" class="container" >
+          <div id="top" class="container" >
           <img id="head" src="head.png">
           <h1>Emotion Analysis</h1>
-<!--           <img src="ealogo.png">
+<!--             <img src="ealogo.png">
  -->      <hr>
       <div id="toprow" class="row">
         <div class="col-md-6">
+        <a href="#/main"><button type="button" ng-click="togglepost = !togglepost" ng-show="!togglepost" class="btn btn-secondary">Upload Your Own Video</button></a>
+        <a href="#/"><button type="button" ng-click="togglepost = !togglepost" ng-hide="!togglepost" class="btn btn-secondary">Back To Home Page</button></a>
+<!-- 
           <a href="#/main"><h5 ng-click="togglepost = !togglepost" ng-show="!togglepost">Upload Your Own Video</h5></a>
-          <a href="#/"><h5 ng-click="togglepost = !togglepost" ng-hide="!togglepost">Back To Home Page</h5></a>
+          <a href="#/"><h5 ng-click="togglepost = !togglepost" ng-hide="!togglepost">Back To Home Page</h5></a> -->
         </div>
         <div class="col-md-6">
+        <button type="button" ng-click="hidevid = !hidevid" ng-show="!hidevid" class="btn btn-secondary">Just Record</button>
+        <button type="button" ng-click="hidevid = !hidevid" ng-hide="!hidevid" class="btn btn-secondary">Hide Recorder</button>
+<!-- 
           <a href="#/"><h5 ng-click="hidevid = !hidevid" ng-show="!hidevid">Just Record</h5></a>
-          <a href="#/"><h5 ng-click="hidevid = !hidevid" ng-hide="!hidevid">Hide Recorder</h5></a>
+          <a href="#/"><h5 ng-click="hidevid = !hidevid" ng-hide="!hidevid">Hide Recorder</h5></a> -->
         </div>
       </div>
     </div>
+    </div>
+
     <div id="body" class="container">
       <div ng-show="!hidevid" class="row">
         <!-- Angular modules -->

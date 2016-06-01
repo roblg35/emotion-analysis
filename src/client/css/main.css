@@ -1,5 +1,5 @@
 body{
-	background-color: black;
+    background-image: url("https://images.unsplash.com/photo-1433832566697-c76419cec523?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=f82f9204fbac25da311ded376bed3118");
 /*	background-color: #FFFFF6;
 */	font-family: Miller Banner;
 }
@@ -7,7 +7,7 @@ body{
 #contain {
   overflow: hidden;
   height: 430px;
-  width: 110%;
+  width: 100%;
   background: #edeae8;
   position: relative;
 }
@@ -17,7 +17,6 @@ body{
 	overflow: hidden;
 	height: 200px;
 	width: 200px;
-	left: 1%;
 	top: 65%;
 	position: relative;
 }
@@ -69,8 +68,9 @@ body{
 	padding-right: 15px;
 	margin-bottom: 30px;
 }
-h5{
-	text-align: center;
+button{
+	position: relative;
+	align: center;
 }
 .container a{
 	text-decoration: none;
@@ -84,6 +84,8 @@ h5{
 h1{
 	text-align: center;
 	color: white;
+	position: relative;
+
 }
 
 hr{
@@ -101,6 +103,7 @@ hr{
 }
 
 .hr{
+
 	border-color: white;
 }
 
