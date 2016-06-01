@@ -21,7 +21,8 @@
     });
 
    mainService.background()
-    
+       $scope.playVid = mainService.localFileVideoPlayer();
+
   }
 
 })();
