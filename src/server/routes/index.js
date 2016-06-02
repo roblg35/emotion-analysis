@@ -19,7 +19,9 @@ router.post('/',function(req, res, next){
 	  // console.log('Status:', response.statusCode);
 	  // console.log('Headers:', JSON.stringify(response.headers));
 	  	  	var id = JSON.parse(body).id
-	  if (JSON.parse(body).status_message !== 'Complete'){
+	  	 if (JSON.parse(body).status_message !== 'Complete'){
+	  	  	setTimeout(myFunction, 9000)
+	  	function myFunction(){
 	  	console.log('TRUE')
 	  	request({
 		  method: 'GET',
@@ -33,9 +35,10 @@ router.post('/',function(req, res, next){
 		   global.io.emit('status', JSON.parse(body));
 		  console.log('Response:', JSON.parse(body));
 		})
-	  } else{
+	  } }else{
 	  global.io.emit('status', JSON.parse(body));
 	  		}
+		    	
 	  // global.io.emit('status', JSON.parse(body));
 	  console.log('Response:', JSON.parse(body));
 	});
