@@ -10,7 +10,7 @@
 
   function appConfig($routeProvider, $httpProvider) {
     $routeProvider
-    .when('/landing', {
+    .when('/', {
       templateUrl: 'views/landing.html',
       controller: 'mainController',
       restricted: false,
@@ -21,7 +21,7 @@
       restricted: false,
       preventLoggedIn: false
     })
-    .otherwise({redirectTo: '/landing'});
+    .otherwise({redirectTo: '/'});
   }
   
   

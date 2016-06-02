@@ -19,10 +19,9 @@
        mainService.graphArrays(data);
        $scope.smile = mainService.getGraphingLines();
     });
-
+   // console.log(mainService.getVideoData())
    mainService.background()
        $scope.playVid = mainService.localFileVideoPlayer();
-
   }
 
 })();

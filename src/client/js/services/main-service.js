@@ -102,6 +102,10 @@
 
             },
 
+            getVideoData: function(){
+               return $http.get('/everything')
+             },
+
             graphArrays: function(data){
               var dataArr = data.frames
                dataArr.forEach(function(val){
