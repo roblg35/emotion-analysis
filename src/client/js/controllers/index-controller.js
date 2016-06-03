@@ -5,12 +5,12 @@
   angular.module('myApp')
     .controller('indexController', indexController);
 
-  indexController.$inject = ['$rootScope', '$scope', '$location', 'mainService','SocketService'];
+  indexController.$inject = ['$rootScope', '$scope','$window', 'mainService','SocketService', 'videoService'];
 
 
 
 //checks user is in DB and sets token for login
-  function indexController($rootScope, $scope, $location, mainService, SocketService) {
+  function indexController($rootScope, $scope, $window, mainService, SocketService, videoService) {
    $scope.smile = mainService.setStyle();
    $scope.smile = mainService.getGraphingLines();
   
@@ -19,9 +19,15 @@
        mainService.graphArrays(data);
        $scope.smile = mainService.getGraphingLines();
     });
-   // console.log(mainService.getVideoData())
    mainService.background()
-       $scope.playVid = mainService.localFileVideoPlayer();
+   $scope.playVid = mainService.localFileVideoPlayer()
+
+
+   $scope.$on('$routeChangeSuccess', function(event, current) {
+		videoService.uploadVidPlayer()
+	     console.log('route changed');
+   });
   }
+
 
 })();

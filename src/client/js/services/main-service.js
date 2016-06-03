@@ -43,7 +43,6 @@
                 var inputNode = document.querySelector('input')
                 inputNode.addEventListener('change', playSelectedFile, false)
             },
-              
             background: function(){
               var video = document.querySelector('.backgroundvid')
                 , container = document.querySelector('#contain');
