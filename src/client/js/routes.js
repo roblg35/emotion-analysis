@@ -20,8 +20,8 @@
       controller: 'indexController',
       restricted: false,
       preventLoggedIn: false
-    }).when('/advertise', {
-      templateUrl: 'views/advertise.html',
+    }).when('/comp', {
+      templateUrl: 'views/comp.html',
       controller: 'indexController',
       restricted: false,
       preventLoggedIn: false
