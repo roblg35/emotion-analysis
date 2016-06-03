@@ -1,6 +1,5 @@
 body{
-/*    background-image: url("https://images.unsplash.com/photo-1443926818681-717d074a57af?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=407e042db9cd1cc68c0c5abc52b9f881");
-*/	background-color: #FFFFF6;
+	background-color: #FFFFF6;
 	font-family: Miller Banner;
 }
 
@@ -29,7 +28,6 @@ body{
 .backgroundvid {
   position: absolute;
   
-  /* Vertical and Horizontal center*/
   left: 50%; top: 50%;
   transform: translate(-50%, -50%);
 }
@@ -51,7 +49,7 @@ body{
 	border-color: white;
 }
 
-.row{
+#row{
 	background-color: white;
 	border-left-color: white;
 	border-right-color: white;
@@ -94,8 +92,7 @@ h1{
 	text-align: center;
 	color: black;
 	position: relative;
-/*	font-size: 70px;
-*/
+
 }
 
 hr{
@@ -143,7 +140,6 @@ margin-bottom: 20px;
 }
 
 
-/*buttons*/
 .btn__grad:hover {
     box-shadow: 0px 18px 31px 0px rgba(0, 0, 0, 0.3);
 }

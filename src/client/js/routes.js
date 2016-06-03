@@ -20,6 +20,11 @@
       controller: 'indexController',
       restricted: false,
       preventLoggedIn: false
+    }).when('/advertise', {
+      templateUrl: 'views/advertise.html',
+      controller: 'indexController',
+      restricted: false,
+      preventLoggedIn: false
     })
     .otherwise({redirectTo: '/'});
   }
