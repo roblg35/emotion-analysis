@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var api = require('../../../key.js')
 var request = require('request');
 
 // var videoID;
@@ -13,8 +12,8 @@ router.post('/',function(req, res, next){
 	  method: 'POST',
 	  url: 'https://api.kairos.com/media?source='+videoUrl,
 	  headers: {
-	    'app_id': '25354dff',
-	    'app_key': '973cc8acf788745dba77aa83255990c6'
+	    'app_id': process.env.APP_ID || '25354dff',
+	    'app_key': process.env.KEY || '973cc8acf788745dba77aa83255990c6'
 	  }}, function (error, response, body) {
 	  // console.log('Status:', response.statusCode);
 	  // console.log('Headers:', JSON.stringify(response.headers));
@@ -27,8 +26,8 @@ router.post('/',function(req, res, next){
 		  method: 'GET',
 		  url: 'https://api.kairos.com/media/'+id,
 		  headers: {
-		    'app_id': '25354dff',
-		    'app_key': '973cc8acf788745dba77aa83255990c6'
+		    'app_id': process.env.APP_ID || '25354dff',
+		    'app_key': process.env.KEY || '973cc8acf788745dba77aa83255990c6'
 		  }}, function (error, response, body) {
 		  // console.log('Status:', response.statusCode);
 		  // console.log('Headers:', JSON.stringify(response.headers));
