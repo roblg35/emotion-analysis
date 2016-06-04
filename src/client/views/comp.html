@@ -11,7 +11,7 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar-collapsible">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#/comp">Advertise</a></li>
+        <li><a href="#/comp" ng-click="reload()">Advertise</a></li>
         <li><a href="#section2">Practice</a></li>
         <li><a href="#section3">Upload</a></li>
         <li><a href="#/everything">Everything</a></li>
@@ -78,14 +78,24 @@
 
 
 <section class="container-fluid" id="section7">
-    <h1 class="text-center2">Graph??</h1>
-    <div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
+    <a><h1 class="text-center2" ng-click="advid = !advid; reload();">Play</h1></a>
+    <div class="row" ng-hide="!advid">
+        <div class="col-sm-6 col-sm-offset-3" ng-hide="!advid">
             <!--    youtube video -->
-          <video id="upload" ng-show="!togglepost" controls>
-            <source src="doritos.mp4" type="video/mp4">
+          <video id="doritoseadd" controls ng-hide="!advid">
+            <source src="doritos.mp4" type="video/mp4" ng-hide="!advid">
             Your browser does not support HTML5 video.
           </video>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section11">
+    <a><h1 class="text-center2" ng-click="adrec = !adrec; reload();">Record</h1></a>
+    <div class="row" ng-hide="!adrec">
+        <div class="col-sm-6 col-sm-offset-3">
+            <!--    youtube video -->
+            <div class="doritoseadd" id="hdfvr-content" ></div>
         </div>
     </div>
 </section>
@@ -93,7 +103,11 @@
 
 <footer id="footer">
     <div class="container">
-       
+    <a><h1 class="text-center2" ng-click="graph = !graph; reload();">Graph</h1></a>
+
+       <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <div  class="graph" id="container" ng-hide="!graph" style="min-width: 310px; height: 400px; margin: 0 auto" >
         <!--/row-->
     </div>
 </footer>

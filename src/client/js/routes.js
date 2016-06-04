@@ -12,9 +12,6 @@
     $routeProvider
     .when('/', {
       templateUrl: 'views/landing.html',
-      controller: 'mainController',
-      restricted: false,
-      preventLoggedIn: false
     }).when('/everything', {
       templateUrl: 'views/everything.html',
       controller: 'indexController',
@@ -22,7 +19,7 @@
       preventLoggedIn: false
     }).when('/comp', {
       templateUrl: 'views/comp.html',
-      controller: 'indexController',
+      controller: 'mainController',
       restricted: false,
       preventLoggedIn: false
     })
