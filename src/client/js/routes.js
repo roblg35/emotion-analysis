@@ -22,6 +22,11 @@
       controller: 'mainController',
       restricted: false,
       preventLoggedIn: false
+    }).when('/practice', {
+      templateUrl: 'views/practice.html',
+      controller: 'mainController',
+      restricted: false,
+      preventLoggedIn: false
     })
     .otherwise({redirectTo: '/'});
   }
