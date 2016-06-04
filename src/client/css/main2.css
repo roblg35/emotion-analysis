@@ -260,6 +260,20 @@ section {
 	padding-bottom:40px;
 }
 
+
+.practiceImage{
+  height: 80%;
+  width: 80%;
+align-content: center;
+}
+
+.practiceImage2{
+  height: 80%;
+  width: 80%;
+align-content: center;
+margin-left: 70px;
+}
+
 footer {
 	background-color:#2b2b2b;
     color:#ddd;
