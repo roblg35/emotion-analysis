@@ -12,7 +12,7 @@
 //checks user is in DB and sets token for login
   function indexController($rootScope, $scope, $window, mainService, SocketService, videoService) {
    $scope.smile = mainService.setStyle();
-   $scope.smile = mainService.getGraphingLines();
+   // $scope.smile = mainService.getGraphingLines();
   
    SocketService.forward('status', $scope);
    $scope.$on('socket:status', function (ev, data) {
