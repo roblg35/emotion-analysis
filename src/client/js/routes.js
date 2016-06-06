@@ -33,9 +33,6 @@
       restricted: false,
       preventLoggedIn: false
     })
-    .when('/me', {
-      templateUrl: 'views/me.html',
-    })
     .otherwise({redirectTo: '/'});
   }
   
