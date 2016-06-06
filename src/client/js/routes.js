@@ -27,6 +27,11 @@
       controller: 'mainController',
       restricted: false,
       preventLoggedIn: false
+    }).when('/upload', {
+      templateUrl: 'views/upload.html',
+      controller: 'uploadController',
+      restricted: false,
+      preventLoggedIn: false
     })
     .otherwise({redirectTo: '/'});
   }
