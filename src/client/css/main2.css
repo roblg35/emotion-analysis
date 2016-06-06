@@ -236,7 +236,14 @@ section {
   font-family: 'Bitter', serif;
   height: 400px;
 }
-  
+  #section63 {
+  background-image: url("../me.jpg");
+  background-size: 100%;
+  background-color: rgba(0,0,0,0.7);
+  color:#fff;
+  font-family: 'Bitter', serif;
+  height: 400px;
+}
   #section34 {
   background-image: url("https://images.unsplash.com/photo-1460058418905-d61a1b4a55fe?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=c6095f29e73bb6b33074d818291a95cc");
   background-size: 100%;
