@@ -24,7 +24,7 @@
 
 <section class="container-fluid" id="section3">
         <div id="loaded">
-            <h1 class="text-center2" >Doritos Loaded</h1>
+            <h1 class="text-center2">Advertise</h1>
             <h2 class="text-center lato animate slideInDown">Customize Your Content</h2>
         </div>
     </div>
@@ -38,20 +38,8 @@
     <div class="row">
      <div class="col-md-4">
      <div class="list-group">
-              <a href="#" class="list-group-item default" >
-                <h2 class="list-group-item-heading">1) Play Video</h2>
-              </a>
-        <div class="box">
-            <img src="https://images.unsplash.com/photo-1454023989775-79520f04322c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9e434433acf7e61b897ee692e51e0a4f" />
-                <div class="overlay">
-                </div>
-            </div>
-        </div>
-       </div> 
-      <div class="col-md-4">
-     <div class="list-group">
               <a href="#" class="list-group-item default">
-                <h2 class="list-group-item-heading">2) Push Record</h2>
+                <h2 class="list-group-item-heading">1) Push Record</h2>
               </a>
         <div class="box">
             <img src="https://images.unsplash.com/reserve/wi9yf7kTQxCNeY72cCY6_Images%20of%20Jenny%20Lace%20Plasticity%20Publish%20(4%20of%2025).jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=50b62525764bf3061603e06d856f0552" />
@@ -60,6 +48,18 @@
             </div>
         </div>
        </div>
+     <div class="col-md-4">
+     <div class="list-group">
+              <a href="#" class="list-group-item default" >
+                <h2 class="list-group-item-heading">2) Play Video</h2>
+              </a>
+        <div class="box">
+            <img src="https://images.unsplash.com/photo-1454023989775-79520f04322c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=9e434433acf7e61b897ee692e51e0a4f" />
+                <div class="overlay">
+                </div>
+            </div>
+        </div>
+       </div> 
          <div class="col-md-4">
          <div class="list-group">
               <a href="#" class="list-group-item default">
@@ -76,8 +76,17 @@
 </div>
 </section> 
 
-
 <section class="container-fluid" id="section7">
+    <a><h1 class="text-center2" ng-click="adrec = !adrec; reload();">Record</h1></a>
+    <div class="row" ng-hide="!adrec">
+        <div class="col-sm-6 col-sm-offset-3">
+            <!--    youtube video -->
+            <div class="doritoseadd" id="hdfvr-content" ></div>
+        </div>
+    </div>
+</section>
+
+<section class="container-fluid" id="section11">
     <a><h1 class="text-center2" ng-click="advid = !advid; reload();">Play</h1></a>
     <div class="row" ng-hide="!advid">
         <div class="col-sm-6 col-sm-offset-3" ng-hide="!advid">
@@ -89,17 +98,6 @@
         </div>
     </div>
 </section>
-
-<section class="container-fluid" id="section11">
-    <a><h1 class="text-center2" ng-click="adrec = !adrec; reload();">Record</h1></a>
-    <div class="row" ng-hide="!adrec">
-        <div class="col-sm-6 col-sm-offset-3">
-            <!--    youtube video -->
-            <div class="doritoseadd" id="hdfvr-content" ></div>
-        </div>
-    </div>
-</section>
-
 
 <footer id="footer">
     <div class="container">
