@@ -276,6 +276,17 @@ section {
 align-content: center;
 }
 
+.graphImage{
+  height: 250px;
+  width: 550px;
+  margin-left: 35px;
+}
+
+.playimage{
+  height: 400px;
+  margin-left: 100px;
+}
+
 .practiceImage2{
   height: 80%;
   width: 80%;
