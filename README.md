@@ -10,13 +10,7 @@ Also, it allows the user to practice their public speaking, interview skills, or
 emotion-analysis.herokuapp.com/#/
 
 ##Tools
-Angular
-Node
-Express
-Kairos API
-AddPipe API
-Socket.io
-High Charts Library
+Angular, Node, Express, Kairos API, AddPipe API, Socket.io, High Charts Library
 
 
 
