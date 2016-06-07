@@ -123,6 +123,9 @@
                         renderTo: 'container',
                         type: 'area'
                     },
+                    title:{
+                      text: 'eNalysis'
+                    },
                     subtitle: {
                         text: 'Emotion Data Graph',
                         x: 0
