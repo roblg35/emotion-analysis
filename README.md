@@ -12,5 +12,6 @@ emotion-analysis.herokuapp.com/#/
 ##Tools
 Angular, Node, Express, Kairos API, AddPipe API, Socket.io, High Charts Library
 
-
+##
+![alt tag](src/client/charts.png)
 
