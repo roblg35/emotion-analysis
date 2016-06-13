@@ -22,7 +22,6 @@
             graphArrays: function(data) {
                 var dataArr = data.frames
                 dataArr.forEach(function(val) {
-                    console.log(val)
                     attention.push(val.person.emotions.attention)
                     dislike.push(val.person.emotions.negative)
                     smile.push(val.person.emotions.smile)

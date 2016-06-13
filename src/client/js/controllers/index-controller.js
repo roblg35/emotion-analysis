@@ -23,13 +23,11 @@
         $scope.playVid = mainService.localFileVideoPlayer()
 
         $scope.reload = function() {
-            console.log('worked')
             videoService.uploadVidPlayer()
         }
 
         $scope.$on('$routeChangeSuccess', function(event, current) {
             videoService.uploadVidPlayer()
-            console.log('route changed');
         });
     }
 
