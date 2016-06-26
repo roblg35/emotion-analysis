@@ -220,7 +220,7 @@ section {
 }
 
 #section3 {
-  background-image: url("../comp.png");
+  background-image: url("../images/comp.png");
   background-size: 100%;
 	background-color: rgba(0,0,0,0.7);
 	color:#fff;
@@ -229,7 +229,7 @@ section {
 }
 
 #section33 {
-  background-image: url("../practice.png");
+  background-image: url("../images/practice.png");
   background-size: 100%;
   background-color: rgba(0,0,0,0.7);
   color:#fff;
@@ -237,7 +237,7 @@ section {
   height: 400px;
 }
   #section63 {
-  background-image: url("../me.jpg");
+  background-image: url("../images/me.jpg");
   background-size: 100%;
   background-color: rgba(0,0,0,0.7);
   color:#fff;
