@@ -12,7 +12,7 @@ router.post('/', function(req, res, next) {
       headers: {
           'app_id': process.env.APP_ID || '25354dff',
           'app_key': process.env.KEY || '973cc8acf788745dba77aa83255990c6'
-      } =
+      } 
   }, function(error, response, body) {
       var id = JSON.parse(body).id
       if (JSON.parse(body).status_message !== 'Complete') {
